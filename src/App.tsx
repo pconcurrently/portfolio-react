@@ -1,12 +1,8 @@
 import * as React from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
-import {
-    Container
-} from 'reactstrap';
-import Header from './components/Layout/Header';
-import TodoList from './components/TodoList';
-import Readme from './components/Readme';
+import Sidebar from './components/Layout/Sidebar';
+import Portfolio from './components/Portfolio/Portfolio';
 
 import './scss/App.scss';
 
@@ -17,13 +13,8 @@ class App extends React.Component<{}> {
     render() {
         return (
             <div className="page-wrapper">
-                <Header title="React Starter" />
-                <Container>
-                    <Switch>
-                        <Route exact path="/" component={TodoList}></Route>
-                        <Route path="/readme" component={Readme}></Route>
-                    </Switch>
-                </Container>
+                <Sidebar />
+                <Portfolio />
             </div>
         );
     }
