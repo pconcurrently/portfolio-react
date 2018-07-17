@@ -2,7 +2,24 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const packagejson = require('./package.json');
+
+const assets = [{
+        from: 'src/assets',
+        to: 'assets'
+    },
+    {
+        from: 'CNAME',
+        to: './'
+    }
+];
+if (packagejson.subdirectory) {
+    assets.push({
+        from: '404.html',
+        to: './'
+    });
+}
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -81,6 +98,7 @@ module.exports = {
         new webpack.DefinePlugin({
             SUBDIRECTORY: JSON.stringify(require("./package.json").subdirectory)
         }),
+        new CopyWebpackPlugin(assets),
         // Fallback to index.html by redirecting from 404.html for deploying to host with subdirectory
         new HtmlWebPackPlugin(
             packagejson.subdirectory ? 
