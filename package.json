@@ -19,7 +19,7 @@
     "dev": "webpack --config webpack.dev.js",
     "deploy": "npm run build && git add dist -f && git commit --allow-empty -m \"Push to gh-pages\" && git subtree push --prefix dist origin gh-pages",
     "deploy-aws": "npm run build && aws s3 sync dist/ s3://portfolio-phohuynh",
-    "deploy-gs": "npm run build && gsutil cp -m -r dist/* gs://portfolio.phohuynh.com",
+    "deploy-gs": "npm run build && gsutil -m cp -r dist/* gs://portfolio.phohuynh.com",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
