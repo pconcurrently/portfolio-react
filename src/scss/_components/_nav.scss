@@ -1,9 +1,16 @@
 #sideNav {
-  .navbar-brand {}
+  .navbar-brand {
+    position: relative;
+    z-index: 1000;
+  }
   .navbar-nav .nav-item .nav-link {
     font-weight: 600;
     text-transform: uppercase;
   }
+  .navbar-toggler {
+      position: relative;
+      z-index: 1000;
+    }
 }
 
 @media (min-width: 992px) {
@@ -35,8 +42,6 @@
       display: flex;
       align-items: flex-start;
       flex-grow: 0;
-      position: relative;
-      z-index: 1000;
 
       width: 100%;
       margin-bottom: auto;
