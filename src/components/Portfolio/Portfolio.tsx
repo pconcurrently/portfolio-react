@@ -179,7 +179,7 @@ const Portfolio = () => {
                     
                     <div className="resume-item d-flex flex-column flex-md-row mb-5">
                         <div className="resume-content mr-auto">
-                            <h3 className="mb-0 text-primary">Senior Frontend Developer</h3>
+                            <h3 className="mb-0 text-primary">Software Engineer</h3>
                             <div className="subheading mb-3 mt-3 text-info">
                                 <img className="company-img mr-3" src="assets/images/fsoft.png" />
                                 FPT Software
