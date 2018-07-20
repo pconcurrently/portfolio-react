@@ -50,11 +50,11 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
         <NavbarToggler onClick={this.toggle}>
           <span className="navbar-toggler-icon"></span>
         </NavbarToggler >
-        <Collapse isOpen={this.state.isOpen} navbar>
+        <Collapse isOpen={this.state.isOpen} navbar onClick={this.toggle}>
           <Nav navbar>
             <NavItem className="nav-item">
               <NavLink className="nav-link" href="#">
-                <ScrollTo selector="#about">About</ScrollTo>
+                <ScrollTo selector="#about">About Me</ScrollTo>
               </NavLink>
             </NavItem>
             <NavItem className="nav-item">
@@ -74,7 +74,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
             </NavItem>
             <NavItem className="nav-item">
               <NavLink className="nav-link" href="#">
-                <ScrollTo selector="#interests">Interests</ScrollTo>
+                <ScrollTo selector="#interests">Other Interests</ScrollTo>
               </NavLink>
             </NavItem>
           </Nav>

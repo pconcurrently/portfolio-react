@@ -1,0 +1,59 @@
+.artist-info {
+    width: 100%;
+    display: flex;
+    font-family: 'Saira Extra Condensed', serif !important;
+    margin-top: 12px;
+    &:nth-child(even){
+        background-color: rgba($color: $cyan, $alpha: 0.1);
+    }
+    &:nth-child(odd){
+        background-color: rgba($color: $orange-2, $alpha: 0.1);
+    }
+
+    .artist-img {
+        border-radius: 50%;
+        border: solid 3px rgba($color: $primary, $alpha: 0.6);
+        width: 68px;
+        &.top-2 {
+            border: solid 3px rgba($color: $red, $alpha: 0.8);
+        }
+    }
+    .artist-name {
+        width: 35%;
+        display: grid;
+        align-items: center;
+        padding-left: 6px;
+    }
+    .artist-playcount {
+        width: calc(65% - 68px);
+        display: grid;
+        align-items: center;
+    }
+
+    // Media query for .artist-info
+    @media #{$break-xl} {
+        width: 50%;
+        &:nth-child(even) {
+            background-color: rgba($color: $orange-2, $alpha: 0.1);
+            padding-left: 5%;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            flex-direction: row-reverse;
+        }
+        &:nth-child(odd) {
+            background-color: rgba($color: $orange-2, $alpha: 0.1);
+            padding-right: 5%;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+
+            .artist-playcount {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+        &:nth-child(4n), &:nth-child(4n-1){
+            background-color: rgba($color: $cyan, $alpha: 0.2);
+        }
+    }
+}
+

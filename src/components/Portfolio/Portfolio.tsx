@@ -1,15 +1,21 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import {
     Tooltip
 } from 'reactstrap';
 import TooltipBadge from './TooltipBadge';
+import ArtistsList from './ArtistsList';
 
 interface PortfolioState {
     isOpen: any;
 }
 
-class Portfolio extends React.Component<any, PortfolioState> {
-    constructor(props: any) {
+interface PortfolioProps {
+    dispatch: any;
+}
+
+class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
+    constructor(props: PortfolioProps) {
         super(props);
         this.state = {
             isOpen: {}
@@ -29,16 +35,16 @@ class Portfolio extends React.Component<any, PortfolioState> {
     render() {
         return (
             <div className="container-fluid p-0">
-                <section className="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+                <section className="resume-section p-3 p-lg-5" id="about">
                     <div className="my-auto">
                         <h1 className="mb-0">Pho
-                    <span className="text-primary">Huynh</span>
+                            <span className="text-primary">Huynh</span>
                         </h1>
-                        <div className="subheading mb-5">{`Ha Noi, Viet Nam  `}
+                        <div className="subheading mb-2">{`Ha Noi, Viet Nam  `}
                             <a href="mailto:shortgiraffe4@gmail.com">shortgiraffe4@gmail.com</a>
                         </div>
-                        <p className="mb-5">Javascript developer</p>
-                        <ul className="list-inline list-social-icons mb-0">
+                        <h5 className="mb-2">Javascript Developer</h5>
+                        <ul className="list-inline list-social-icons mb-4">
                             <li className="list-inline-item">
                                 <a href="https://www.facebook.com/ShortGiraffe">
                                     <span className="fa-stack fa-lg">
@@ -73,6 +79,7 @@ class Portfolio extends React.Component<any, PortfolioState> {
                             </li>
                         </ul>
                     </div>
+                    <ArtistsList />
                 </section>
                 <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
                     <div className="my-auto">
@@ -237,7 +244,7 @@ class Portfolio extends React.Component<any, PortfolioState> {
                 <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
                     <div className="my-auto">
                         <h2 className="mb-5">Interests</h2>
-                        <p>Mostly gaming and novel.</p>
+                        <p>Mostly gaming and novel</p>
                     </div>
                 </section>
             </div>
@@ -245,4 +252,4 @@ class Portfolio extends React.Component<any, PortfolioState> {
     }
 };
 
-export default Portfolio;
+export default connect(null)(Portfolio);

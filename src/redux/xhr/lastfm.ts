@@ -1,11 +1,15 @@
 import { $get } from './api';
 
-const LASTFM_API_KEY = process.env.LASTFM_API_KEY;
+const path = "https://portfolio-phohuynh.appspot.com/v1/";
 
-const path = "https://api.phohuynh.com/";
+export const getArtists = async () => {
+    const res = await $get(`${path}getArtists`);
 
-export const getFavoriteArtists = async () => {
-    const res = await $get(`${path}getFavoriteArtists`);
+    return res;
+}
+
+export const getRecent = async () => {
+    const res = await $get(`${path}getRecent`);
 
     return res;
 }
