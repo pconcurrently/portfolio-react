@@ -2,15 +2,13 @@ import * as React from 'react';
 import {
     Tooltip
 } from 'reactstrap';
+import TooltipBadge from './TooltipBadge';
 
-interface PortfolioProps {
-    toggle: (name: string) => void;
-}
 interface PortfolioState {
     isOpen: any;
 }
 
-class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
+class Portfolio extends React.Component<any, PortfolioState> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -82,68 +80,65 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
 
                         <div className="subheading mb-3">Programming Languages</div>
                         <ul className="list-inline list-icons">
-                            <li className="list-inline-item" title="javascript">
-                                <i className="devicon-javascript-plain"></i>
-                                <Tooltip placement="right" isOpen={this.state.isOpen["javascript"]} target="TooltipExample" toggle={() => this.props.toggle("javascript")}>
-                                    Javascript
-                            </Tooltip>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-javascript-plain" id="js" tooltip="Javascript" />
                             </li>
-                            <li className="list-inline-item" title="typescript">
-                                <i className="devicon-typescript-plain"></i>
+                            <li className="list-inline-item" >
+                                <TooltipBadge icon="devicon-typescript-plain" id="ts" tooltip="Typescript" />
                             </li>
-                            <li className="list-inline-item" title="c#">
-                                <i className="devicon-csharp-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-csharp-plain" id="csharp" tooltip="C#" />
                             </li>
                         </ul>
 
                         <div className="subheading mb-3">Platforms and Frameworks</div>
                         <ul className="list-inline list-icons">
-                            <li className="list-inline-item" title="nodejs">
-                                <i className="devicon-nodejs-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-nodejs-plain" id="nodejs" tooltip="NodeJs" />
                             </li>
-                            <li className="list-inline-item" title="express">
-                                <i className="devicon-express-original-wordmark"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-express-original-wordmark" id="express" tooltip="ExpressJs" />
                             </li>
-                            <li className="list-inline-item" title="reactjs">
-                                <i className="devicon-react-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-react-plain" id="reactjs" tooltip="ReactJs" />
                             </li>
-                            <li className="list-inline-item" title="angularjs">
-                                <i className="devicon-angularjs-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-angularjs-plain" id="angularjs" tooltip="AngularJs" />
                             </li>
-                            <li className="list-inline-item" title="bootstrap">
-                                <i className="devicon-bootstrap-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-bootstrap-plain" id="bootstrap" tooltip="Bootstrap" />
                             </li>
                         </ul>
 
                         <div className="subheading mb-3">Tools</div>
                         <ul className="list-inline list-icons">
-                            <li className="list-inline-item" title="webpack">
-                                <i className="devicon-webpack-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-webpack-plain" id="webpack" tooltip="Webpack" />
                             </li>
-                            <li className="list-inline-item" title="git">
-                                <i className="devicon-git-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-git-plain" id="git" tooltip="Git" />
                             </li>
-                            <li className="list-inline-item" title="babel">
-                                <i className="devicon-babel-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-babel-plain" id="babel" tooltip="Babel" />
                             </li>
-                            <li className="list-inline-item" title="photoshop">
-                                <i className="devicon-photoshop-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-photoshop-plain" id="photoshop" tooltip="Photoshop" />
                             </li>
                         </ul>
 
                         <div className="subheading mb-3">Others</div>
                         <ul className="list-inline list-icons">
-                            <li className="list-inline-item" title="html5">
-                                <i className="devicon-html5-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-html5-plain" id="html5" tooltip="HTML5" />
                             </li>
-                            <li className="list-inline-item" title="css3">
-                                <i className="devicon-css3-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-css3-plain" id="css3" tooltip="CSS3" />
                             </li>
-                            <li className="list-inline-item" title="sass">
-                                <i className="devicon-sass-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-sass-plain" id="sass" tooltip="Sass" />
                             </li>
-                            <li className="list-inline-item" title="mongodb">
-                                <i className="devicon-mongodb-plain"></i>
+                            <li className="list-inline-item">
+                                <TooltipBadge icon="devicon-mongodb-plain" id="mongodb" tooltip="MongoDB" />
                             </li>
                         </ul>
                     </div>
