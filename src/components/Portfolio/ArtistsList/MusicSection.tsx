@@ -50,7 +50,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
                 ) : (
                     <div className="recent-track-info">
                         <div className="img-wrapper">
-                            <img className="artist-img" src={recentArtist.image[1]['#text']} alt={recentArtist.name} />
+                            <img className="artist-img" src={recentArtist.image[1]['#text']} />
                         </div>
                         <div className="track-info">
                             {`${recentArtist.name} - ${recentTrack.name}`}
@@ -75,7 +75,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
                         <Row>
                             {artistsList && artistsList.length ? artistsList.slice(0, this.state.artistsPaging).map((artist, index) => (
                                 <div className="artist-info" key={index}>
-                                    <img className={`artist-img ${[0,1].indexOf(index) !== -1 ? 'top-2' : ''}`} src={artist.image[1]['#text']} alt={artist.name} />
+                                    <img className={`artist-img ${[0,1].indexOf(index) !== -1 ? 'top-2' : ''}`} src={artist.image[1]['#text']} />
                                     <div className="artist-name">
                                         {artist.name}
                                     </div>
