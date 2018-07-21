@@ -217,7 +217,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/fsoft.png" />
                                     FPT Software
                             </div>
-                                <p>Not really had a chance to decide which platform/technology to work with besides C# (Asp.Net) but I'm glad to attain coding fundamentals.</p>
+                                <p>Not really had a chance to decide which platform/technology to work with besides C# (Asp.Net) but I'm glad to be able to attain coding fundamentals.</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">2013 - 2015</span>
