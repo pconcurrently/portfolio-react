@@ -30,12 +30,20 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
     };
 
     this.toggle = this.toggle.bind(this);
+    this.collapseSidebar = this.collapseSidebar.bind(this);
   }
 
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+  collapseSidebar() {
+    if (window.innerWidth <= 991) {
+      this.setState({
+        isOpen: false
+      });
+    }
   }
 
   render() {
@@ -50,7 +58,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
         <NavbarToggler onClick={this.toggle}>
           <span className="navbar-toggler-icon"></span>
         </NavbarToggler >
-        <Collapse isOpen={this.state.isOpen} navbar onClick={this.toggle}>
+        <Collapse isOpen={this.state.isOpen} navbar onClick={this.collapseSidebar}>
           <Nav navbar>
             <NavItem className="nav-item">
               <NavLink className="nav-link" href="#">

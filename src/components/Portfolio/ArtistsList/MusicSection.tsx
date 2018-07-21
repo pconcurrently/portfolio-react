@@ -46,6 +46,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
                     <div className="lds-ripple"><div></div><div></div></div>
                 ):(
                     <div>
+                        <small><i>(*Number of plays)</i></small>
                         <Row>
                             {artistsList && artistsList.length ? artistsList.slice(0, this.state.artistsPaging).map((artist, index) => (
                                 <div className="artist-info" key={index}>
