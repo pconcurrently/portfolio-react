@@ -76,3 +76,8 @@ $loader_color: $primary;
   margin: 0 auto;
   max-width: 20vw;
 }
+.svg-loader.bars {
+  background: url('../assets/images/bars-loader.svg');
+  width: 60px;
+  height: 60px;
+}
