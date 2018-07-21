@@ -70,25 +70,39 @@
     font-family: 'Saira Extra Condensed', serif !important;
     font-size: 16px;
 
-    .artist-img {
-        width: 69px;
-        height: 69px;
-        border-radius: 50%;
-        border: solid 3px rgba($color: $green, $alpha: 0.6);
+    .img-wrapper {
+        display: grid;
+        align-items: center;
+        .artist-img {
+            width: 69px;
+            height: 69px;
+            border-radius: 50%;
+            border: solid 3px rgba($color: $green, $alpha: 0.6);
+        }
     }
     .track-info {
         display: grid;
         align-items: center;
         padding-left: 6px;
         padding-right: 0px;
-        width: 60%;
+        width: 45%;
     }
     .now-playing {
         display: flex;
-        width: calc(40% - 69px);
+        width: calc(55% - 69px);
+        .svg-wrapper {
+            width: 60px;
+            display: grid;
+            align-items: center;
+            .svg-loader.bars {
+            margin: auto;
+        }
+        }
         .now-playing-status {
             display: grid;
             align-items: center;
+            font-size: 14px;
+            width: calc(100% - 60px);
         }
     }
 

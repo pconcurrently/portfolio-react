@@ -44,25 +44,29 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
         return (
             <div>
                 <h4>Before you get to know me, be acquainted with my music first</h4>
-                <h5>Most recent track</h5>
+                <h5 className="mt-2">Most recent track</h5>
                 {getRecentPending ? (
                     <div className="lds-ripple"><div></div><div></div></div>
                 ) : (
                     <div className="recent-track-info">
-                        <img className="artist-img" src={recentArtist.image[1]['#text']} alt=""/>
+                        <div className="img-wrapper">
+                            <img className="artist-img" src={recentArtist.image[1]['#text']} alt={recentArtist.name} />
+                        </div>
                         <div className="track-info">
                             {`${recentArtist.name} - ${recentTrack.name}`}
                         </div>
                             {recentTrack && recentTrack['@attr'] && recentTrack['@attr']['nowplaying'] === 'true' ? (
                                 <div className="now-playing ">
-                                    <div className="svg-loader bars">
+                                    <div className="svg-wrapper">
+                                        <div className="svg-loader bars">
+                                    </div>
                                     </div>
                                     <span className="now-playing-status">Now playing...</span>
                                 </div>
                             ) : undefined}
                     </div>
                 )}
-                <h5>List 50 of my all-time favorites (based on <a href="https://www.last.fm/user/ShortGiraffe4/">last.fm</a>)</h5>
+                <h5 className="mt-4">List 50 of my all-time favorites (based on <a href="https://www.last.fm/user/ShortGiraffe4/">last.fm</a>)</h5>
                 {getArtistsPending ? (
                     <div className="lds-ripple"><div></div><div></div></div>
                 ):(
