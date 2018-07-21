@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Particles from 'react-particles-js';
 import {
   Collapse,
   Navbar,
@@ -7,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
 const ScrollTo = require('react-scroll-into-view');
 
