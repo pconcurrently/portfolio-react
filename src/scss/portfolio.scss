@@ -13,7 +13,8 @@
     .artist-img {
         border-radius: 50%;
         border: solid 3px rgba($color: $primary, $alpha: 0.6);
-        width: 68px;
+        width: 69px;
+        height: 69px;
         &.top-2 {
             border: solid 3px rgba($color: $red, $alpha: 0.8);
         }
@@ -60,6 +61,40 @@
         &:nth-child(4n), &:nth-child(4n-1){
             background-color: rgba($color: $cyan, $alpha: 0.2);
         }
+    }
+}
+
+.recent-track-info {
+    display: flex;
+    width: 100%;
+    font-family: 'Saira Extra Condensed', serif !important;
+    font-size: 16px;
+
+    .artist-img {
+        width: 69px;
+        height: 69px;
+        border-radius: 50%;
+        border: solid 3px rgba($color: $green, $alpha: 0.6);
+    }
+    .track-info {
+        width: 35%;
+        display: grid;
+        align-items: center;
+        padding-left: 6px;
+        padding-right: 0px;
+        width: 60%;
+    }
+    .now-playing {
+        display: flex;
+        .now-playing-status {
+            display: grid;
+            align-items: center;
+        }
+    }
+
+
+    @media #{$break-xl} {
+        width: 50%;
     }
 }
 

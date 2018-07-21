@@ -1,22 +1,15 @@
 import * as lastfmApi from './xhr/lastfm';
 
-interface Todo {
-    id: string;
-    name: string;
-    status: boolean;
-}
-interface TodoList {
-    getArtistsPending: boolean;
-    artistsList: Todo[];
-}
-
-const initialState: TodoList = {
+const initialState = {
     getArtistsPending: true,
-    artistsList: [],
+    getRecentPending: true,
+    artistsList: <any>[],
+    recentTrack: {},
+    recentArtist: {}
 };
 /* TYPES */
 const GET_ARTISTS = 'lastfm/GET_ARTISTS';
-const GET_RECENT = 'lastfm/GET_RECENT';
+const GET_MOST_RECENT = 'lastfm/GET_MOST_RECENT';
 
 /* ACTIONS */
 export const getArtists = () => {
@@ -31,25 +24,30 @@ export const getArtists = () => {
         })
     }
 }
-export const getRecent = () => {
-    return (dispatch: any) => {
-        const promise = lastfmApi.getRecent();
+export const getMostRecent = () => {
+    return async (dispatch: any) => {
+        const recent = await lastfmApi.getMostRecent();
+        if(!recent.error) {
+            const recentTrack = recent.recenttracks.track[0];
 
-        promise.then(res => {
+            const artistResult = await lastfmApi.getMostRecentArtist(recentTrack.artist['#text']);
+            const recentArtist = artistResult.error ? {} : artistResult.artist;
+
             dispatch({
-                type: GET_RECENT,
-                recent: res
+                type: GET_MOST_RECENT,
+                recentTrack,
+                recentArtist
             })
-        })
+        }
     }
-}
+};
 
 
 /* SELECTORS */
 
 
 /* REDUCER */
-export const lastfmReducer = (state = initialState, action: { type: string, artists: any[], recent: any }) => {
+export const lastfmReducer = (state = initialState, action: { type: string, artists: any[], recentTrack: any, recentArtist: any }) => {
     switch (action.type) {
         case GET_ARTISTS:
             return {
@@ -57,25 +55,14 @@ export const lastfmReducer = (state = initialState, action: { type: string, arti
                 getArtistsPending: false,
                 artistsList: action.artists
             }
-        case GET_RECENT:
+        case GET_MOST_RECENT:
             return {
                 ...state,
-                recent: action.recent
+                recentTrack: action.recentTrack,
+                recentArtist: action.recentArtist,
+                getRecentPending: false
             }
         default:
             return state;
     }
 };
-
-// Utils
-// Generate simple unique id
-const ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const ID_LENGTH = 8;
-
-const generateId = function () {
-    let rtn = '';
-    for (let i = 0; i < ID_LENGTH; i++) {
-        rtn += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
-    }
-    return rtn;
-}

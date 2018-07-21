@@ -2,11 +2,14 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { Progress, Button, Row } from 'reactstrap';
-import { getArtists, getRecent } from '../../../redux/lastfm.redux';
+import { getArtists, getMostRecent } from '../../../redux/lastfm.redux';
 
 interface MusicSectionProps {
     getArtistsPending: boolean;
-    artistsList?: any[];
+    getRecentPending: boolean;
+    artistsList: any[];
+    recentTrack: any;
+    recentArtist: any;
     dispatch?: any;
 }
 
@@ -26,7 +29,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
 
     componentWillMount() {
         this.props.dispatch(getArtists());
-        this.props.dispatch(getRecent());
+        this.props.dispatch(getMostRecent());
     }
 
     switchPaging() {
@@ -36,11 +39,29 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
     }
 
     render() {
-        const { artistsList, getArtistsPending } = this.props;
+        const { artistsList, getArtistsPending, getRecentPending, recentArtist, recentTrack } = this.props;
         const highestCount = artistsList && artistsList.length ? artistsList[0].playcount : 1;
         return (
             <div>
                 <h4>Before you get to know me, be acquainted with my music first</h4>
+                <h5>Most recent track</h5>
+                {getRecentPending ? (
+                    <div className="lds-ripple"><div></div><div></div></div>
+                ) : (
+                    <div className="recent-track-info">
+                        <img className="artist-img" src={recentArtist.image[1]['#text']} alt=""/>
+                        <div className="track-info">
+                            {`${recentArtist.name} - ${recentTrack.name}`}
+                        </div>
+                            {recentTrack && recentTrack['@attr'] && recentTrack['@attr']['nowplaying'] === 'true' ? (
+                                <div className="now-playing ">
+                                    <div className="svg-loader bars">
+                                    </div>
+                                    <span className="now-playing-status">Now playing...</span>
+                                </div>
+                            ) : undefined}
+                    </div>
+                )}
                 <h5>List 50 of my all-time favorites (based on <a href="https://www.last.fm/user/ShortGiraffe4/">last.fm</a>)</h5>
                 {getArtistsPending ? (
                     <div className="lds-ripple"><div></div><div></div></div>
@@ -70,7 +91,10 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
 
 const mapStateToProps = (state: any) => ({
     artistsList: state.lastfm.artistsList,
-    getArtistsPending: state.lastfm.getArtistsPending
+    getArtistsPending: state.lastfm.getArtistsPending,
+    recentTrack: state.lastfm.recentTrack,
+    recentArtist: state.lastfm.recentArtist,
+    getRecentPending: state.lastfm.getRecentPending
 });
 
 export default connect(mapStateToProps)(MusicSection);
