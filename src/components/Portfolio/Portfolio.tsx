@@ -175,7 +175,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/leflair.png" />
                                     Leflair Vietnam
                             </div>
-                                <p>Worked with a small team where I had to be a so-called "Fullstack developer".</p>
+                                <p>Worked with a small team where I was a so-called "Full-stack developer".</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">July 2017 - March 2018</span>
@@ -189,7 +189,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/quoine.png" />
                                     Quoine
                             </div>
-                                <p>A funny place and fresh start onto ReactJS.</p>
+                                <p>A fresh start on ReactJs.</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">January 2017 - June 2017</span>
@@ -203,7 +203,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/vastbit.png" />
                                     Vastbit
                             </div>
-                                <p>Was overrated and took an overwhelming postion and worked my-ass-off to finish the job. Learned the most here.</p>
+                                <p>Had opportunity to work directly with foreign customers. A big step to be able to take on frontend side, confidently.</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">2016</span>
@@ -217,7 +217,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/fsoft.png" />
                                     FPT Software
                             </div>
-                                <p>I both worked for FPT Software Da Nang and Ho Chi Minh Branch. I found my fundamentals here.</p>
+                                <p>Not really had a chance to decide which platform/technology to work with besides C# (Asp.Net) but I'm glad to attain coding fundamentals.</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">2013 - 2015</span>
