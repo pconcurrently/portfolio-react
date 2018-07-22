@@ -80,6 +80,9 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
                 <ScrollTo selector="#interests">Other Interests</ScrollTo>
               </NavLink>
             </NavItem>
+            <NavItem className="nav-item">
+              <NavLink className="nav-link" href="https://blog.phohuynh.com" target="_blank" />
+            </NavItem>
           </Nav>
         </Collapse >
       </Navbar>
