@@ -81,7 +81,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
               </NavLink>
             </NavItem>
             <NavItem className="nav-item">
-              <NavLink className="nav-link" href="https://blog.phohuynh.com" target="_blank" />
+              <NavLink className="nav-link" href="https://blog.phohuynh.com" target="_blank">My Blog</NavLink>
             </NavItem>
           </Nav>
         </Collapse >
