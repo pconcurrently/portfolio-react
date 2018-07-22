@@ -21,7 +21,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
     constructor(props: any) {
         super(props);
         this.state = {
-            artistsPaging: 20
+            artistsPaging: 10
         }
 
         this.switchPaging = this.switchPaging.bind(this);
@@ -34,7 +34,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
 
     switchPaging() {
         this.setState({
-            artistsPaging: this.state.artistsPaging === 20 ? this.props.artistsList.length : 20
+            artistsPaging: this.state.artistsPaging === 10 ? this.props.artistsList.length : 10
         })
     }
 
@@ -85,7 +85,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
                                 </div>
                             )) : undefined}
                         </Row>
-                        <Button color="link" className="float-right" onClick={this.switchPaging}>{this.state.artistsPaging === 20 ? 'View all >>' : '<< View less'}</Button>
+                        <Button color="link" className="float-right" onClick={this.switchPaging}>{this.state.artistsPaging === 10 ? 'View all >>' : '<< View less'}</Button>
                     </div> 
                 )}
             </div>
