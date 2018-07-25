@@ -4,7 +4,7 @@ import {
     Tooltip
 } from 'reactstrap';
 import TooltipBadge from './TooltipBadge';
-import ArtistsList from './ArtistsList';
+import ArtistsList from './MusicSection';
 
 interface PortfolioState {
     isOpen: any;

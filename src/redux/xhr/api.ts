@@ -1,7 +1,5 @@
 import * as fetch from 'isomorphic-fetch';
 
-
-
 export const request = async function (uri: string, method: string, body: any) {
     const res = await fetch(uri, {
         method,

@@ -50,7 +50,7 @@ class MusicSection extends React.Component<MusicSectionProps, MusicSectionState>
                 ) : (
                     <div className="recent-track-info">
                         <div className="img-wrapper">
-                            <img className="artist-img" src={recentArtist.image[1]['#text']} />
+                            <img className="artist-img" src={recentArtist.image[1]['#text'] || 'assets/images/default-artist-img.png'} />
                         </div>
                         <div className="track-info">
                             {`${recentArtist.name} - ${recentTrack.name}`}
