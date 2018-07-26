@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import Sidebar from './components/Layout/Sidebar';
-import Portfolio from './components/Portfolio/Portfolio';
+import Portfolio from './components/Portfolio';
 
 import './scss/App.scss';
 
