@@ -225,7 +225,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                         </div>
                     </div>
                 </section>
-                <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+                {/* <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
                     <div className="my-auto">
                         <h2 className="mb-5">Education</h2>
 
@@ -240,13 +240,13 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+                </section> */}
+                {/* <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
                     <div className="my-auto">
                         <h2 className="mb-5">Interests</h2>
                         <p>Mostly gaming and novel</p>
                     </div>
-                </section>
+                </section> */}
             </div>
         );
     }

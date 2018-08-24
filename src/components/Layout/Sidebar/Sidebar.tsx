@@ -70,7 +70,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
                 <ScrollTo selector="#experience">Experience</ScrollTo>
               </NavLink>
             </NavItem>
-            <NavItem className="nav-item">
+            {/* <NavItem className="nav-item">
               <NavLink className="nav-link" href="#">
                 <ScrollTo selector="#education">Education</ScrollTo>
               </NavLink>
@@ -79,7 +79,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState>{
               <NavLink className="nav-link" href="#">
                 <ScrollTo selector="#interests">Other Interests</ScrollTo>
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem className="nav-item">
               <NavLink className="nav-link" href="https://blog.phohuynh.com" target="_blank">My Blog</NavLink>
             </NavItem>
