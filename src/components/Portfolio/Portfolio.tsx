@@ -40,7 +40,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                         <h1 className="mb-0">Pho
                             <span className="text-primary">Huynh</span>
                         </h1>
-                        <div className="subheading mb-2">{`Ha Noi, Viet Nam  `}
+                        <div className="subheading mb-2">{`Da Nang, Viet Nam  `}
                             <a href="mailto:shortgiraffe4@gmail.com">shortgiraffe4@gmail.com</a>
                         </div>
                         <h5 className="mb-2">Javascript Developer</h5>
