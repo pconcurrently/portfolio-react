@@ -90,11 +90,23 @@ module.exports = {
         new webpack.DefinePlugin({
             SUBDIRECTORY: JSON.stringify(require("./package.json").subdirectory)
         }),
-        new CopyWebpackPlugin(assets),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src/assets',
+                    to: 'assets'
+                },
+                {
+                    from: 'CNAME',
+                    to: './'
+                }
+            ]
+        }),
         new HtmlWebPackPlugin(
             {
                 template: "./src/index.html",
-                filename: "./index.html"
+                filename: "./index.html",
+                inject: 'body'
             }
         ),
         

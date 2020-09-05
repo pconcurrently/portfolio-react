@@ -1,6 +1,6 @@
 import { $get } from './api';
 
-const path = "https://portfolio-api.phohuynh.com/v1/";
+const path = "https://portfolio-phohuynh.appspot.com/v1/";
 
 export const getArtists = async () => {
     const res = await $get(`${path}getArtists`);

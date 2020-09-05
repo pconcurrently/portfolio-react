@@ -40,7 +40,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                         <h1 className="mb-0">Pho
                             <span className="text-primary">Huynh</span>
                         </h1>
-                        <div className="subheading mb-2">{`Da Nang, Viet Nam  `}
+                        <div className="subheading mb-2">{`Ho Chi Minh City, Viet Nam  `}
                             <a href="mailto:shortgiraffe4@gmail.com">shortgiraffe4@gmail.com</a>
                         </div>
                         <h5 className="mb-2">Javascript Developer</h5>
@@ -153,6 +153,20 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                 <section className="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
                     <div className="my-auto">
                         <h2 className="mb-5">Experience</h2>
+
+                        <div className="resume-item d-flex flex-column flex-md-row mb-5">
+                            <div className="resume-content mr-auto">
+                                <h3 className="mb-0 text-primary">Frontend Team Lead</h3>
+                                <div className="subheading mb-3 mt-3 text-info">
+                                    <img className="company-img mr-3" src="assets/images/4d.png" />
+                                    FourDigit Inc.
+                            </div>
+                                <p>A new journey in a Japanese culture company.</p>
+                            </div>
+                            <div className="resume-date text-md-right">
+                                <span className="text-primary">August 2020 - Present</span>
+                            </div>
+                        </div>
 
                         <div className="resume-item d-flex flex-column flex-md-row mb-5">
                             <div className="resume-content mr-auto">
