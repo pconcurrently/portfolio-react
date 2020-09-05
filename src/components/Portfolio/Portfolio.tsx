@@ -178,7 +178,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                 <p>Tempted to go abroad to work for a while.</p>
                             </div>
                             <div className="resume-date text-md-right">
-                                <span className="text-primary">May 2018 - Present</span>
+                                <span className="text-primary">May 2018 - August 2020</span>
                             </div>
                         </div>
 
