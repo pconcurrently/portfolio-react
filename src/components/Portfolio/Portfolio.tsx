@@ -41,7 +41,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                             <span className="text-primary">Huynh</span>
                         </h1>
                         <div className="subheading mb-2">{`Ho Chi Minh City, Viet Nam  `}
-                            <a href="mailto:shortgiraffe4@gmail.com">shortgiraffe4@gmail.com</a>
+                            <a href="mailto:shortgiraffe4@gmail.com">p@concurrently.dev</a>
                         </div>
                         <h5 className="mb-2">Javascript Developer</h5>
                         <ul className="list-inline list-social-icons mb-4">
