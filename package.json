@@ -17,12 +17,9 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "deploy": "npm run build && npm run deploy-gs-1 && npm run deploy-gs-2 && npm run deploy-gs-3 && npm run deploy-gs-4 && npm run deploy-gs-5",
-    "deploy-gs-1": "gsutil -m rm gs://phohuynh.com/** && gsutil -m cp -r dist/* gs://phohuynh.com",
-    "deploy-gs-2": "gsutil -m rm gs://portfolio.phohuynh.com/** && gsutil -m cp -r dist/* gs://portfolio.phohuynh.com",
-    "deploy-gs-3": "gsutil -m rm gs://www.phohuynh.com/** && gsutil -m cp -r dist/* gs://www.phohuynh.com",
-    "deploy-gs-4": "gsutil -m rm gs://phoht.com/** && gsutil -m cp -r dist/* gs://phoht.com",
-    "deploy-gs-5": "gsutil -m rm gs://www.phoht.com/** && gsutil -m cp -r dist/* gs://www.phoht.com",
+    "deploy": "npm run build && npm run deploy-gs-1 && npm run deploy-gs-2",
+    "deploy-gs-1": "gsutil -m rm gs://phoht.com/** && gsutil -m cp -r dist/* gs://phoht.com",
+    "deploy-gs-2": "gsutil -m rm gs://www.phoht.com/** && gsutil -m cp -r dist/* gs://www.phoht.com",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

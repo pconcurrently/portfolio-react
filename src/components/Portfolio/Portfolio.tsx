@@ -156,12 +156,12 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
 
                         <div className="resume-item d-flex flex-column flex-md-row mb-5">
                             <div className="resume-content mr-auto">
-                                <h3 className="mb-0 text-primary">Frontend Team Lead</h3>
+                                <h3 className="mb-0 text-primary">Frontend Tech Lead</h3>
                                 <div className="subheading mb-3 mt-3 text-info">
-                                    <img className="company-img mr-3" src="assets/images/4d.png" />
-                                    FourDigit Inc.
+                                    <img className="company-img mr-3" src="assets/images/hhg.png" />
+                                    Hello Health Group
                             </div>
-                                <p>A new journey in a Japanese culture company.</p>
+                                <p>Into the healthcare zone</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">August 2020 - Present</span>
