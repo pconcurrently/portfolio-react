@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+
+import ArtistsList from './MusicSection';
 import {
     Tooltip
 } from 'reactstrap';
 import TooltipBadge from './TooltipBadge';
-import ArtistsList from './MusicSection';
+import { connect } from 'react-redux';
 
 interface PortfolioState {
     isOpen: any;
@@ -161,7 +162,7 @@ class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
                                     <img className="company-img mr-3" src="assets/images/hhg.png" />
                                     Hello Health Group
                             </div>
-                                <p>Into the healthcare zone</p>
+                                <p>Into the healthcare verse</p>
                             </div>
                             <div className="resume-date text-md-right">
                                 <span className="text-primary">August 2020 - Present</span>
